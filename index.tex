@@ -1,0 +1,152 @@
+%%% index.tex ---
+
+%% Author: dominikho@gmx.net
+%% Version: $Id: index.tex,v 0.0 2008/10/20 19:05:25 dominikh Exp$
+
+\documentclass[12pt,oneside,ngerman,a4paper,bibgerm]{scrreprt}
+\usepackage[a4paper,left=4cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{scrpage2}
+\pagestyle{scrheadings}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{bibgerm}
+\usepackage{url}
+\usepackage{setspace}
+\usepackage{tabularx}
+\usepackage{remreset}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{fancybox}
+\usepackage{babel}
+\usepackage[babel]{csquotes}
+
+\newcommand{\myquote}[2]{
+  \begin{quote}
+    \enquote{#1}#2
+  \end{quote}
+}
+
+\definecolor{grey}{gray}{0.5}
+
+\newcommand{\signature}[1]{
+  \vspace*{\bigskipamount}
+  \hfill
+  \begin{tabularx}{0.95\linewidth}{Xr}
+    \\
+    \\
+    \\
+    \cline{2-2}
+    & \makebox[4cm][r]#1
+  \end{tabularx}
+  \vspace*{\bigskipamount}
+}
+
+\makeatletter% --> De-TeX-FAQ
+\renewcommand*{\lstlistoflistings}{%
+  \begingroup
+    \if@twocolumn
+      \@restonecoltrue\onecolumn
+    \else
+      \@restonecolfalse
+    \fi
+    \lol@heading
+    \setlength{\parskip}{\z@}%
+    \setlength{\parindent}{\z@}%
+    \setlength{\parfillskip}{\z@ \@plus 1fil}%
+    \@starttoc{lol}%
+    \if@restonecol\twocolumn\fi
+  \endgroup
+}
+\makeatother% --> \makeatletter
+
+\renewcommand*{\chapterpagestyle}{scrheadings}
+\renewcommand{\chaptermark}[1]{%
+  \markboth{#1}{}}
+\chead{-\pagemark-} \ihead{} \ohead{} \cfoot{}
+
+\makeatletter
+\@removefromreset{footnote}{chapter}
+\makeatother
+
+%% \usepackage[debugshow,final]{graphics}
+
+%% \revision$Header: /home/dominikh/bibtex/index.tex,v 0.0 2008/10/20 19:05:26 dominikh Exp$
+
+\author{Dominik Honnef}
+\title{Elektronisches Kaufhaus mit XML}
+\date{2008/09}
+
+\begin{document}
+\onehalfspacing
+\clearpage
+\begingroup
+\renewcommand*{\chapterpagestyle}{empty}
+\pagestyle{empty}
+\vspace*{\fill}
+\begin{center}
+  \textbf{\huge{Elektronisches Kaufhaus mit XML}} \\
+  \bigskip
+  \small{Dominik Honnef} \\
+  \bigskip
+  \small{2008/09}
+\end{center}
+\vspace*{\fill}
+\begin{tabular}{|l|r|}
+  \hline
+  \textbf{Schule} & Gymnasium im Loekamp \\
+  \hline
+  \textbf{Kurs} & If1 \\
+  \hline
+  \textbf{Schuljahr} & 12 \\
+  \hline
+  \textbf{Fachlehrer} & Herr Wlost \\
+  \hline
+\end{tabular}
+\clearpage
+\tableofcontents{}
+\clearpage
+\endgroup
+\newpage
+\chapter{Einleitung}
+\chapter{Umsetzung}
+%%%% ##########################################################################
+\addcontentsline{toc}{chapter}{Listings}
+\lstlistoflistings
+%%%% ##########################################################################
+\listoffigures
+%\liststotoc
+%%%% ##########################################################################
+\bibliographystyle{plaindin}
+\bibliography{db}
+\addcontentsline{toc}{chapter}{\bibname}
+
+%% remove these when using real \cite's %%
+\nocite{pdf:xslt}
+\nocite{pdf:xquery}
+\nocite{pdf:xml}
+\nocite{pdf:xslfo}
+\nocite{wiki:de:xml}
+\nocite{book:phpmysql}
+%% ------------------------------------ %%
+
+\chapter*{Erklärung}
+\addcontentsline{toc}{chapter}{Erklärung}
+"`Ich erkläre, dass ich die Facharbeit ohne fremde
+Hilfe angefertigt und nur die
+im Literaturverzeichnis angeführten Quellen und Hilfsmittel benutzt habe."' \\
+\signature{Dominik Honnef}
+
+"`Ich erkläre mich mit dem Umstand einverstanden, dass diese
+Facharbeit archiviert und für andere Schüler frei zugänglich gemacht
+wird. \textbf{Des Weiteren ist es erwünscht, dass, falls möglich, auch die
+erreichte Note mit verzeichnet wird.}"' \\
+\signature{Dominik Honnef}
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
