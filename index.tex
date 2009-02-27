@@ -25,6 +25,8 @@
 \usepackage[babel]{csquotes}
 \usepackage{wallpaper}
 
+\usepackage{enumitem}
+
 \newcommand{\myquote}[2]{
   \begin{quote}
     \enquote{#1}#2
@@ -46,6 +48,16 @@
   \vspace*{\bigskipamount}
 }
 
+\newcommand{\BibTeX}{
+  $\mathrm{B{\scriptstyle{IB}} \! T\!_{\displaystyle E} \! X}$
+}
+
+\newenvironment{VarDescription}[1]%
+  {\begin{list}{}{\renewcommand{\makelabel}[1]{\textbf{##1:}\hfil}%
+    \settowidth{\labelwidth}{\textbf{#1:}}%
+    \setlength{\leftmargin}{\labelwidth}\addtolength{\leftmargin}{\labelsep}}}%
+  {\end{list}}
+
 \makeatletter% --> De-TeX-FAQ
 \renewcommand*{\lstlistoflistings}{%
   \begingroup
@@ -66,7 +78,7 @@
 
 \renewcommand*{\chapterpagestyle}{scrheadings}
 \renewcommand{\chaptermark}[1]{%
-  \markboth{#1}{}}
+\markboth{#1}{}}
 \chead{-\pagemark-} \ihead{} \ohead{} \cfoot{}
 
 \makeatletter
@@ -85,7 +97,7 @@
 \onehalfspacing
 \clearpage
 \begingroup
-\ThisCenterWallPaper{0.5}{images/db}
+\ThisCenterWallPaper{0.75}{images/db}
 \renewcommand*{\chapterpagestyle}{empty}
 \pagestyle{empty}
 \vspace*{\fill}
@@ -114,12 +126,13 @@
 \endgroup
 \newpage
 \input{introduction.tex}
-\chapter{Umsetzung}
+\input{xml.tex}
+\input{application.tex}
 %%%% ##########################################################################
-\addcontentsline{toc}{chapter}{Listings}
-\lstlistoflistings
+% \addcontentsline{toc}{chapter}{Listings}
+% \lstlistoflistings
 %%%% ##########################################################################
-\listoffigures
+% \listoffigures
 %\liststotoc
 %%%% ##########################################################################
 \bibliographystyle{plaindin}
@@ -134,7 +147,7 @@
 \nocite{wiki:de:xml}
 \nocite{book:phpmysql}
 %% ------------------------------------ %%
-
+\input{addendum.tex}
 \chapter*{Erklärung}
 \addcontentsline{toc}{chapter}{Erklärung}
 "`Ich erkläre, dass ich die Facharbeit ohne fremde

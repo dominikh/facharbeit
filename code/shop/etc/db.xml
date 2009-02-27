@@ -1,0 +1,28 @@
+<shop>
+  <category>
+    <name>Kategorie 1</name>
+    <items>
+      <item>
+        <price>3</price>
+        <name>Produkt 1</name>
+        <description>Dies ist das Testprodukt Nr. 1</description>
+      </item>
+      <item>
+        <price>10</price>
+        <name>Produkt 2</name>
+        <description>Dies ist das Testprodukt Nr. 2</description>
+      </item>
+    </items>
+  </category>
+
+  <category>
+    <name>Kategorie 2</name>
+    <items>
+      <item>
+        <price>100</price>
+        <name>Produkt 3</name>
+        <description>Dies ist das Testprodukt Nr. 3</description>
+      </item>
+    </items>
+  </category>
+</shop>
