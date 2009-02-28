@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#navigation {
+  float: left;
+  border: 1px solid black;
+  width: 10%;
+  list-style-type: none;
+}
+
+#content {
+  background-color: yellow;
+  float: left;
+  width: 89%;
+}
+
+.error {
+  background-color: red;
+}
+
+.category {
+  margin-bottom: 5px;
+}
+
+.category .name {
+  display: block;
+  font-weight: bold;
+}

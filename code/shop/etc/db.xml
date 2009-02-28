@@ -1,6 +1,9 @@
 <shop>
   <category>
     <name>Kategorie 1</name>
+    <description>
+      Dies ist die Kategorie 1, welche Produkte vom Typ Foo beinhalten wird.
+    </description>
     <items>
       <item>
         <price>3</price>
@@ -17,6 +20,9 @@
 
   <category>
     <name>Kategorie 2</name>
+    <description>
+      Dies ist die Kategorie 2, welche Produkte vom Typ Bar beinhalten wird.
+    </description>
     <items>
       <item>
         <price>100</price>
