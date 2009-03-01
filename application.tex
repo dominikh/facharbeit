@@ -1,7 +1,52 @@
 \chapter{Unsere Anwendung}
 \section{Vorüberlegungen}
-\section{Vorbreitungen}
+Bevor ich mit der Entwicklung der Anwendung beginne, muss ich einige
+Vorüberlegungen machen, um nicht hinterher größere Teile wegen
+Fehlkonzeptionen ändern zu müssen.
+
+\begin{enumerate}
+   \item Welche API werde ich zur Ansprache der XML Datei verwenden?
+  Rückblickend auf auf Abschnitt \ref{xml-php} (Seite \pageref{xml-php})
+  fällt die Entscheidung für SimpleXML nicht schwer.
+
+   \item Da sowohl DOM als auch SimpleXML Probleme mit komplexeren Dokumenten
+  haben, stellt sich die Frage, ob ich mit einer einzigen Datei für alle Produkte
+  arbeiten werde, oder ob ich die Dateien aufteile und dynamisch zusammensetze.
+
+  In Anbetracht der Tatsache, dass unsere Anwendung nur über eine kleine
+  Anzahl von Produkten verfügen wird, werde ich auf das dynamische Zusammensetzen
+  verzichten.
+   \item Da SimpleXML bereits Objekte zurückliefert und unsere Objekte für Kategorien
+  und Produkte nicht viel mehr können müssen, als Werte zurückzuliefern (und ggf. zu setzen)
+  werde ich keine eigenen Klassen schreiben.
+
+   \item Die Konfigurationsdatei, welche voraussichtlich ohnehin nur die Emailadresse
+  beinhalten wird, wird per XML realisiert werden.
+
+   \item Anstatt einer ausgefeilten Templateengine wie Smarty\footnote{http://www.smarty.net/} werde ich mit
+  einfachen {\em includes} arbeiten
+
+   \item Auch die Ordnerstruktur muss gut durchdacht sein. Ich werde folgende verwenden:
+  \begin{VarDescription}{}
+     \item[/] Wird  alle Unterordner und die index.php beinhalten, welche
+    vom Browser aufgerufen wird
+
+     \item[/etc/] Wird Konfigurationen, Datenbanken und Bilder
+    beinhalten
+
+     \item[/lib/] Wird alle Klassen beinhalten
+
+     \item[/templates/] Wird alle Seiten der Anwendung beinhalten
+  \end{VarDescription}
+\end{enumerate}
+\section{Vorbereitungen}
+Bis auf das Anlegen der Ordner etc. werde ich keine Vorbereitungen zu
+treffen haben, da ich bereits eine vollständige Entwicklungsumgebung
+für Webanwendungen, sprich Apache, PHP, Mailserver und einen
+angebrachten Editor, installiert habe.
+
 \section{Entwicklung}
+
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "index"
