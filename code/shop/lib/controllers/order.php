@@ -12,20 +12,19 @@ if(!isset($_REQUEST['c']) or !isset($_REQUEST['p'])) {
   $product = $category->xpath('products/product[name = "'. $_REQUEST['p'] .'"]');
   $product = $product[0];
   $tmp->assign('product', $product);
-
-  if(!isset($_REQUEST['name']) or !isset($_REQUEST['address']) or !isset($_REQUEST['email'])) {
+  error_reporting(E_ERROR); // so we dont have to use dozens of !isset ifs
+  if(empty($_REQUEST['name']) or empty($_REQUEST['address']) or empty($_REQUEST['email'])) {
     // we are missing important information so we are going to display the order formular
     $tmp->assign("cant_proceed", false);
     $tmp->assign("got_information", false);
 
-    error_reporting(E_ERROR); // so we dont have to use dozens of !isset ifs
+
     // setting the stuff the user already entered so it won't be lost
     $defaults = array(
                       'name' => $_REQUEST['name'],
                       'address' => $_REQUEST['address'],
                       'email' => $_REQUEST['email']
                       );
-    error_reporting(E_ALL);
 
     $tmp->assign('defaults', $defaults);
   } else {
@@ -46,5 +45,7 @@ if(!isset($_REQUEST['c']) or !isset($_REQUEST['p'])) {
 
     mail($config->email_address['value'], "Bestellung", $message);
   }
+  // in general we want to see all warnings, these really help
+  error_reporting(E_ALL);
 }
 ?>
