@@ -10,3 +10,5 @@ buecher
 *.pdf.mk
 *.toc
 *.orig
+\#*
+.#*
