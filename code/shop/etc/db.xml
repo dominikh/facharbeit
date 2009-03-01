@@ -4,18 +4,20 @@
     <description>
       Dies ist die Kategorie 1, welche Produkte vom Typ Foo beinhalten wird.
     </description>
-    <items>
-      <item>
-        <price>3</price>
+    <products>
+      <product>
         <name>Produkt 1</name>
         <description>Dies ist das Testprodukt Nr. 1</description>
-      </item>
-      <item>
-        <price>10</price>
+        <price>3</price>
+        <image>etc/images/product1.png</image>
+      </product>
+      <product>
         <name>Produkt 2</name>
         <description>Dies ist das Testprodukt Nr. 2</description>
-      </item>
-    </items>
+        <price>10</price>
+        <image>etc/images/product2.png</image>
+      </product>
+    </products>
   </category>
 
   <category>
@@ -23,12 +25,13 @@
     <description>
       Dies ist die Kategorie 2, welche Produkte vom Typ Bar beinhalten wird.
     </description>
-    <items>
-      <item>
-        <price>100</price>
+    <products>
+      <product>
         <name>Produkt 3</name>
         <description>Dies ist das Testprodukt Nr. 3</description>
-      </item>
-    </items>
+        <price>100</price>
+        <image>etc/images/product3.png</image>
+      </product>
+    </products>
   </category>
 </shop>
