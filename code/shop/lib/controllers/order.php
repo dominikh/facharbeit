@@ -29,12 +29,13 @@ if(!isset($_REQUEST['c']) or !isset($_REQUEST['p'])) {
 
     $tmp->assign('defaults', $defaults);
   } else {
-    // yay, got all information, going to send the email we are not
-    // going to check the supplied information. if the user changed
-    // the product information, its his own fault...
+    // yay, got all information, going to send the email
+
+    //we are not going to check the supplied information. if the user
+    // changed the product information, its his own fault...
     $tmp->assign("cant_proceed", false);
     $tmp->assign("got_information", true);
-    //bool mail ( string $to , string $subject , string $message [, string $additional_headers [, string $additional_parameters ]] )
+
     $message = "";
     $message .= "Kategorie: " . $category->name . "\n";
     $message .= "Produkt: " . $product->name . "\n";
