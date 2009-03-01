@@ -22,10 +22,12 @@ class TemplateEngine {
 
 $tmp = new TemplateEngine('templates/index.php');
 
-$xml    = simplexml_load_file("etc/db.xml");
-$tmp->assign("db", $xml);
+$db    = simplexml_load_file("etc/db.xml");
+$tmp->assign("db", $db);
 
-$allowed_sites = array("home", "categories", "aboutus", "category");
+$config = simplexml_load_file("etc/config.xml");
+
+$allowed_sites = array("home", "categories", "aboutus", "category", "order");
 $site = '';
 
 if(!isset($_REQUEST['s'])) {
