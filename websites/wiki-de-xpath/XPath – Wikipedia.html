@@ -1,0 +1,532 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="generator" content="MediaWiki 1.15alpha" />
+		<meta name="keywords" content="XPath,Abfragesprache,Baum (Graphentheorie),CCXML,CURIE,Cascading Style Sheets,Common Gateway Interface,Compound Document Formats,Document Object Model,Dokumenttypdefinition,Extensible Forms Description Language" />
+		<link rel="alternate" type="application/x-wiki" title="Seite bearbeiten" href="http://de.wikipedia.org/w/index.php?title=XPath&amp;action=edit" />
+		<link rel="edit" title="Seite bearbeiten" href="http://de.wikipedia.org/w/index.php?title=XPath&amp;action=edit" />
+		<link rel="apple-touch-icon" href="http://de.wikipedia.org/apple-touch-icon.png" />
+		<link rel="shortcut icon" href="XPath – Wikipedia_files/favicon0.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (de)" />
+		<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+		<link rel="alternate" type="application/rss+xml" title="RSS-Feed für Wikipedia" href="http://de.wikipedia.org/w/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=rss" />
+		<link rel="alternate" type="application/atom+xml" title="Atom-Feed für Wikipedia" href="http://de.wikipedia.org/w/index.php?title=Spezial:Letzte_%C3%84nderungen&amp;feed=atom" />
+		<title>XPath – Wikipedia</title>
+		<link rel="stylesheet" href="XPath – Wikipedia_files/shared00.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="XPath – Wikipedia_files/commonPr.css" type="text/css" media="print" />
+		<link rel="stylesheet" href="XPath – Wikipedia_files/main0000.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="XPath – Wikipedia_files/main0001.css" type="text/css" media="handheld" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins-1.5/monobook/IE50Fixes.css?206xx" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="/skins-1.5/monobook/IE55Fixes.css?206xx" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="/skins-1.5/monobook/IE60Fixes.css?206xx" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="/skins-1.5/monobook/IE70Fixes.css?206xx" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="XPath – Wikipedia_files/flaggedr.css" type="text/css" />
+		<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" />
+		<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Print.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="print" />
+		<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Handheld.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="handheld" />
+		<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Monobook.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" />
+		<link rel="stylesheet" href="/w/index.php?title=-&amp;action=raw&amp;maxage=2678400&amp;gen=css" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="/skins-1.5/common/IEFixes.js?206xx"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "/skins-1.5";
+		var wgArticlePath = "/wiki/$1";
+		var wgScriptPath = "/w";
+		var wgScript = "/w/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://de.wikipedia.org";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "XPath";
+		var wgTitle = "XPath";
+		var wgAction = "view";
+		var wgArticleId = "8468";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "de";
+		var wgContentLanguage = "de";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = "55936210";
+		var wgVersion = "1.15alpha";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = [",	.", ".	,"];
+		var wgDigitTransformTable = ["", ""];
+		var wgMWSuggestTemplate = "http://de.wikipedia.org/w/api.php?action=opensearch\x26search={searchTerms}\x26namespace={namespaces}\x26suggest";
+		var wgDBname = "dewiki";
+		var wgSearchNamespaces = [0];
+		var wgMWSuggestMessages = ["mit Vorschlägen", "keine Vorschläge"];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="XPath – Wikipedia_files/wikibits.js"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="XPath – Wikipedia_files/ajax0000.js"></script>
+		<script type="text/javascript" src="XPath – Wikipedia_files/mwsugges.js"></script>
+<script type="text/javascript">/*<![CDATA[*/
+var wgNotice='';var wgNoticeLocal='';
+/*]]>*/</script>		<script type="text/javascript" src="XPath – Wikipedia_files/centraln.js"></script>
+<style type="text/css">/*<![CDATA[*/
+.source-xml {line-height: normal;}
+.source-xml li, .source-xml pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for xml
+ * CSS class: source-xml, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie (http://qbnz.com/highlighter)
+ */
+.source-xml .de1, .source-xml .de2 {font-family: 'Courier New', Courier, monospace; font-weight: normal;}
+.source-xml  {}
+.source-xml .head {}
+.source-xml .foot {}
+.source-xml .imp {font-weight: bold; color: red;}
+.source-xml .ln-xtra {color: #cc0; background-color: #ffc;}
+.source-xml li {font-family: 'Courier New', Courier, monospace; color: black; font-weight: normal; font-style: normal;}
+.source-xml li.li2 {font-weight: bold;}
+.source-xml .coMULTI {color: #808080; font-style: italic;}
+.source-xml .es0 {color: #000099; font-weight: bold;}
+.source-xml .br0 {color: #66cc66;}
+.source-xml .st0 {color: #ff0000;}
+.source-xml .nu0 {color: #cc66cc;}
+.source-xml .sc0 {color: #00bbdd;}
+.source-xml .sc1 {color: #ddbb00;}
+.source-xml .sc2 {color: #339933;}
+.source-xml .sc3 {color: #009900;}
+.source-xml .re0 {color: #000066;}
+.source-xml .re1 {font-weight: bold; color: black;}
+.source-xml .re2 {font-weight: bold; color: black;}
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "XPath\ –\ Wikipedia_files/css00000.css";
+/*]]>*/
+</style><script type="text/javascript">
+var wgFlaggedRevsParams = {"tags": {"accuracy": 2}};
+var wgFlaggedRevsParams2 = {"tags": {"reliability": 3, "completeness": 2, "npov": 2, "presentation": 1}};
+var wgStableRevisionId = 55936210;
+var wgAjaxFeedback = {"sendingMsg": "Übertragung …", "sentMsg": "Dankeschön!"}
+var wgAjaxReview = {"sendingMsg": "Übertragung …", "sentMsg": "Markierung gesetzt", "actioncomplete": "Aktion beendet"}
+</script>
+<script type="text/javascript" src="XPath – Wikipedia_files/flaggedr.js"></script>
+		<script type="text/javascript" src="/w/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=monobook"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-XPath skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+		<div id="siteNotice"><script type='text/javascript'>if (wgNotice != '') document.writeln(wgNotice);</script><script type="text/javascript" language="JavaScript">
+/* <![CDATA[ */
+document.writeln("\x3cdiv style=\"position:absolute; z-index:100; right:5px; top:-20px;\" class=\"metadata\" id=\"donate\"\x3e\n\x3cdiv style=\"text-align:right; font-size:80%\"\x3e\x3ca href=\"/wiki/Wikipedia:Spenden\" title=\"Wikipedia:Spenden\"\x3eIhre \x3cb\x3eSpenden\x3c/b\x3e\x3c/a\x3e helfen, Wikipedia zu betreiben. \n\x3c/div\x3e\x3c/div\x3e\n");
+/* ]]> */
+</script></div>		<h1 id="firstHeading" class="firstHeading">XPath</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">aus Wikipedia, der freien Enzyklopädie</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Wechseln zu: <a href="">Navigation</a>, <a href="">Suche</a></div>			<!-- start content -->
+			<p>Die <b>XML Path Language</b> <b>(XPath)</b> ist eine vom <a href="http://de.wikipedia.org/wiki/World_Wide_Web_Consortium" title="World Wide Web Consortium">W3-Konsortium</a> entwickelte <a href="http://de.wikipedia.org/wiki/Abfragesprache" title="Abfragesprache">Abfragesprache</a>, um Teile eines <a href="http://de.wikipedia.org/wiki/XML" title="XML" class="mw-redirect">XML</a>-Dokumentes zu adressieren. XPath dient als Grundlage einer Reihe weiterer Standards wie <a href="http://de.wikipedia.org/wiki/XSLT" title="XSLT" class="mw-redirect">XSLT</a>, <a href="http://de.wikipedia.org/wiki/XPointer" title="XPointer">XPointer</a> und <a href="http://de.wikipedia.org/wiki/XQuery" title="XQuery">XQuery</a>. Seit ihrer Verabschiedung am 23. Januar 2007 hat <i>XPath 2.0</i> die seit 1999 gültige Version <i>XPath 1.0</i> abgelöst.</p>
+<p>Als Weiterentwicklungen betrachten lassen sich auch <a href="http://de.wikipedia.org/wiki/XPointer" title="XPointer">XPointer</a>, das weitergehende Adressierungsmöglichkeiten bietet, und <a href="http://de.wikipedia.org/wiki/XLink_(Syntax)" title="XLink (Syntax)">XLink</a>, das die Einbindung von Verweisen in XML-Dokumente standardisiert, sowie <a href="http://de.wikipedia.org/wiki/XQuery" title="XQuery">XQuery</a>.</p>
+<table id="toc" class="toc" summary="Inhaltsverzeichnis">
+<tr>
+<td>
+<div id="toctitle">
+<h2>Inhaltsverzeichnis</h2>
+</div>
+<ul>
+<li class="toclevel-1"><a href=""><span class="tocnumber">1</span> <span class="toctext">Prinzipien von XPath 1.0</span></a></li>
+<li class="toclevel-1"><a href=""><span class="tocnumber">2</span> <span class="toctext">Achsen</span></a></li>
+<li class="toclevel-1"><a href=""><span class="tocnumber">3</span> <span class="toctext">Knotentests</span></a></li>
+<li class="toclevel-1"><a href=""><span class="tocnumber">4</span> <span class="toctext">Prädikate</span></a></li>
+<li class="toclevel-1"><a href=""><span class="tocnumber">5</span> <span class="toctext">Beispiel</span></a></li>
+<li class="toclevel-1"><a href=""><span class="tocnumber">6</span> <span class="toctext">Siehe auch</span></a></li>
+<li class="toclevel-1"><a href=""><span class="tocnumber">7</span> <span class="toctext">Einzelnachweise</span></a></li>
+<li class="toclevel-1"><a href=""><span class="tocnumber">8</span> <span class="toctext">Literatur</span></a></li>
+<li class="toclevel-1"><a href=""><span class="tocnumber">9</span> <span class="toctext">Weblinks</span></a></li>
+</ul>
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+//<![CDATA[
+ if (window.showTocToggle) { var tocShowText = "Anzeigen"; var tocHideText = "Verbergen"; showTocToggle(); } 
+//]]>
+</script>
+<p><a name="Prinzipien_von_XPath_1.0" id="Prinzipien_von_XPath_1.0"></a></p>
+<h2><span class="editsection">[<a href="http://de.wikipedia.org/w/index.php?title=XPath&amp;action=edit&amp;section=1" title="Abschnitt bearbeiten: Prinzipien von XPath 1.0">Bearbeiten</a>]</span> <span class="mw-headline">Prinzipien von XPath 1.0</span></h2>
+<p>Ein <i>XPath</i>-Ausdruck adressiert Teile eines <a href="http://de.wikipedia.org/wiki/XML" title="XML" class="mw-redirect">XML</a>-Dokuments, das dabei als <a href="http://de.wikipedia.org/wiki/Baum_(Graphentheorie)" title="Baum (Graphentheorie)">Baum</a> betrachtet wird, wobei einige Unterschiede zum „klassischen“ Baum der <a href="http://de.wikipedia.org/wiki/Graphentheorie" title="Graphentheorie">Graphentheorie</a> zu beachten sind:</p>
+<ul>
+<li>Knoten <i>(nodes)</i> des Baumes sind <a href="http://de.wikipedia.org/wiki/XML" title="XML" class="mw-redirect">XML</a>-Elemente, -Attribute, -Textknoten, -Kommentare, -Namensräume und -Verarbeitungsanweisungen.</li>
+<li>Nur <a href="http://de.wikipedia.org/wiki/XML" title="XML" class="mw-redirect">XML</a>-Elemente gelten als <code>child</code> im Sinne einer XPath-Achse. Alle anderen Knoten stehen auf der gleichen Hierarchie-Stufe des Baumes wie der Knoten, der sie enthält.</li>
+<li>Die Achsen <code>preceding</code>, <code>following</code>, <code>preceding-sibling</code> und <code>following-sibling</code> orientieren sich nicht allein an der Baumstruktur, sondern auch an der Reihenfolge der Deklaration der Elemente im XML-Dokument (Linked-Tree).</li>
+</ul>
+<p><br />
+Ein <i>XPath</i>-Ausdruck setzt sich zusammen aus:</p>
+<ul>
+<li>einem oder mehreren <b>Lokalisierungsschritten</b> <i>(Location Steps)</i>. Sie werden mit dem Zeichen &#160; <code>/</code> &#160; getrennt.</li>
+<li>optional gefolgt von einem oder mehreren <b>Prädikaten</b> <i>(predicates)</i>.</li>
+</ul>
+<p>Ein <i>Lokalisierungsschritt</i> besteht aus:</p>
+<ul>
+<li><b>Achse</b> <i>(axis)</i> und</li>
+<li><b>Knotentest</b> <i>(node-test)</i>,</li>
+</ul>
+<p><br />
+Beliebig viele XPath-Ausdrücke lassen sich mit dem Zeichen &#160; | &#160; <a href="http://de.wikipedia.org/wiki/Vereinigungsmenge" title="Vereinigungsmenge" class="mw-redirect">mengenmäßig vereinigen</a>.</p>
+<p>Es gibt stets verschiedene Möglichkeiten, eine gesuchte Knotenmenge in XPath auszudrücken.</p>
+<p>XPath operiert auf der logischen Dokumentenstruktur. Das bedeutet zum Beispiel, dass man Entitäten schon geparst vorfindet oder dass auch eventuelle Standard-Attribute und -Knoten, die durch ein <a href="http://de.wikipedia.org/wiki/XML-Schema" title="XML-Schema" class="mw-redirect">Schema</a> vorgegeben werden, schon im Baum enthalten sind.</p>
+<p><a name="Achsen" id="Achsen"></a></p>
+<h2><span class="editsection">[<a href="http://de.wikipedia.org/w/index.php?title=XPath&amp;action=edit&amp;section=2" title="Abschnitt bearbeiten: Achsen">Bearbeiten</a>]</span> <span class="mw-headline">Achsen</span></h2>
+<p>Durch Angabe von Achsen wird ausgehend vom aktuellen Kontextknoten in der Baumstruktur des XML-Dokuments navigiert.</p>
+<p>Wird dabei von der Wurzel des XML-Dokuments ausgegangen, wird dem XPath-Ausdruck das Zeichen <code>/</code> vorangestellt.</p>
+<table class="prettytable">
+<tr class="hintergrundfarbe6">
+<th>Achse</th>
+<th>adressierte Knoten</th>
+<th>Abkürzung</th>
+</tr>
+<tr>
+<td><code>child</code></td>
+<td>direkt untergeordnete Knoten</td>
+<td><i>weglassen</i></td>
+</tr>
+<tr>
+<td><code>parent</code></td>
+<td>der direkt übergeordnete Elternknoten</td>
+<td><code>..</code></td>
+</tr>
+<tr>
+<td><code>self</code></td>
+<td>der Kontextknoten selbst (nützlich für zusätzliche Bedingungen)</td>
+<td><code>.</code></td>
+</tr>
+<tr>
+<td><code>ancestor</code></td>
+<td>übergeordnete Knoten</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ancestor-or-self</code></td>
+<td>übergeordnete Knoten inklusive des Kontextknotens</td>
+<td></td>
+</tr>
+<tr>
+<td><code>descendant</code></td>
+<td>untergeordnete Knoten</td>
+<td></td>
+</tr>
+<tr>
+<td><code>descendant-or-self</code></td>
+<td>untergeordnete Knoten inklusive des Kontextknotens</td>
+<td><code>//</code></td>
+</tr>
+<tr>
+<td><code>following</code></td>
+<td>nachfolgend im XML-Dokument (ohne untergeordnete Knoten)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>following-sibling</code></td>
+<td>wie <code>following</code>, und vom gleichen <code>parent</code> stammend</td>
+<td></td>
+</tr>
+<tr>
+<td><code>preceding</code></td>
+<td>vorhergehend im XML-Dokument ohne übergeordnete Knoten<sup id="cite_ref-0" class="reference"><a href="" title="">[1]</a></sup></td>
+<td></td>
+</tr>
+<tr>
+<td><code>preceding-sibling</code></td>
+<td>wie <code>preceding</code>, und vom gleichen <code>parent</code> stammend</td>
+<td></td>
+</tr>
+<tr>
+<td><code>attribute</code></td>
+<td>Attributknoten</td>
+<td><code>@</code></td>
+</tr>
+<tr>
+<td><code>namespace</code></td>
+<td>Namensraumknoten, die aus dem Attribut <code>xmlns</code> stammen</td>
+<td></td>
+</tr>
+</table>
+<p>Die fünf Achsen <code>self</code>, <code>ancestor</code>, <code>descendant</code>, <code>preceding</code> und <code>following</code> bilden von einem beliebigen Knoten den gesamten Dokumentbaum ab.</p>
+<p><a name="Knotentests" id="Knotentests"></a></p>
+<h2><span class="editsection">[<a href="http://de.wikipedia.org/w/index.php?title=XPath&amp;action=edit&amp;section=3" title="Abschnitt bearbeiten: Knotentests">Bearbeiten</a>]</span> <span class="mw-headline">Knotentests</span></h2>
+<p>Knotentests (geschrieben <code><i>Achse</i>::<i>Knotentest</i></code>) schränken die Elementauswahl einer Achse ein:</p>
+<ul>
+<li>Angabe eines Elementnamens wählt alle entsprechenden Elemente.<br />
+Beispiel: <code>/descendant-or-self::Foo</code> wählt alle Elemente im Dokument, die den Namen „Foo“ haben.</li>
+<li>Mit dem Zeichen <code>*</code> wählt man beliebige Elemente.<br />
+Beispiel: <code>/descendant-or-self::Foo/child::*</code> wählt alle Elemente im Dokument, die Kinder von Elementen mit dem Namen „Foo“ sind.</li>
+<li>Mit <code>text()</code>, <code>comment()</code> und <code>processing-instruction()</code> lassen sich Knoten bestimmten Typs wählen.<br />
+Zu beachten ist, dass Attribute und Namensräume nicht in Knotentests, sondern als eigene Achse gewählt werden.</li>
+</ul>
+<p><a name="Pr.C3.A4dikate" id="Pr.C3.A4dikate"></a></p>
+<h2><span class="editsection">[<a href="http://de.wikipedia.org/w/index.php?title=XPath&amp;action=edit&amp;section=4" title="Abschnitt bearbeiten: Prädikate">Bearbeiten</a>]</span> <span class="mw-headline">Prädikate</span></h2>
+<p>Durch Angabe von Prädikaten kann das Ergebnis weiter eingeschränkt werden. Prädikate werden in eckige Klammern eingeschlossen und können in beliebiger Zahl hintereinander geschrieben werden, wobei die Reihenfolge wesentlich ist. Prädikate können XPath-Ausdrücke enthalten, außerdem kann eine Vielzahl von Funktionen verwendet werden. Die sind zum Beispiel:</p>
+<ul>
+<li>Relationszeichen: <code>=&#160;!= and or &lt; &gt; &lt;= &gt;=</code></li>
+<li>Zeichenkettenfunktionen:
+<ul>
+<li><code>normalize-space()</code> – Entfernen von Leerzeichen am Anfang und Ende des Strings und Reduktion aufeinanderfolgender Leerzeichen auf eines</li>
+<li><code>substring()</code> – Einen Teilstring selektieren</li>
+<li><code>substring-before(source, splitter)</code> – Einen Teilstring vor dem ersten Vorkommen des Trennzeichens selektieren</li>
+<li><code>substring-after(source, splitter)</code> – Einen Teilstring nach dem ersten Vorkommen des Trennzeichens selektieren</li>
+<li><code>string-length()</code> – Länge des Strings</li>
+</ul>
+</li>
+<li>Numerische Funktionen: <code>+ - * div <a href="http://de.wikipedia.org/wiki/Modulo" title="Modulo">mod</a></code></li>
+<li>Knotenmengen-Funktionen:
+<ul>
+<li><code>count()</code> – Anzahl der Knoten in einer Knotenmenge</li>
+<li><code>id()</code> – Selektiert Elemente über die <a href="http://de.wikipedia.org/wiki/Dokumenttypdefinition" title="Dokumenttypdefinition">DTD</a>-ID</li>
+<li><code>name()</code> – Name des Knotens</li>
+</ul>
+</li>
+</ul>
+<p>Beispiele:</p>
+<ul>
+<li><code>//child::Buch[count(./Seite)&lt;=100][count(./Seite)&gt;=10]</code> liefert alle Knoten vom Typ „Buch“, die mindestens 10 aber höchstens 100 Kindelemente vom Typ „Seite“ haben.</li>
+</ul>
+<p>(das gleiche leistet <code>//Buch[count(Seite)&lt;=100 and count(Seite)&gt;=10]</code>)</p>
+<ul>
+<li><code>substring-before('$variable', ':')</code> Selektiert den Teilstring vor dem ersten Doppelpunkt aus dem Wert der Variable mit dem Namen variable</li>
+</ul>
+<p><a name="Beispiel" id="Beispiel"></a></p>
+<h2><span class="editsection">[<a href="http://de.wikipedia.org/w/index.php?title=XPath&amp;action=edit&amp;section=5" title="Abschnitt bearbeiten: Beispiel">Bearbeiten</a>]</span> <span class="mw-headline">Beispiel</span></h2>
+<p>Gegeben sei folgendes XML-Dokument:</p>
+<div dir="ltr" style="text-align: left;">
+<pre class="source-xml">
+<span class="sc3"><span class="re1">&lt;?xml</span> <span class="re0">version</span>=<span class="st0">"1.0"</span> <span class="re0">encoding</span>=<span class="st0">"utf-8"</span> <span class="re0">standalone</span>=<span class="st0">"yes"</span> <span class="re2">?&gt;</span></span>
+<span class="sc3"><span class="re1">&lt;dok<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="coMULTI">&lt;!-- ein XML-Dokument --&gt;</span></span>
+    <span class="sc3"><span class="re1">&lt;kap</span> <span class="re0">title</span>=<span class="st0">"Nettes Dokument"</span><span class="re2">&gt;</span></span>
+        <span class="sc3"><span class="re1">&lt;pa<span class="re2">&gt;</span></span></span>Ein Absatz<span class="sc3"><span class="re1">&lt;/pa<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;pa<span class="re2">&gt;</span></span></span>Noch ein Absatz<span class="sc3"><span class="re1">&lt;/pa<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;pa<span class="re2">&gt;</span></span></span>Und noch ein Absatz<span class="sc3"><span class="re1">&lt;/pa<span class="re2">&gt;</span></span></span>
+        <span class="sc3"><span class="re1">&lt;pa<span class="re2">&gt;</span></span></span>Nett, oder?<span class="sc3"><span class="re1">&lt;/pa<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;/kap<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;kap</span> <span class="re0">title</span>=<span class="st0">"Zweites Kapitel"</span><span class="re2">&gt;</span></span>
+        <span class="sc3"><span class="re1">&lt;pa<span class="re2">&gt;</span></span></span>Ein Absatz<span class="sc3"><span class="re1">&lt;/pa<span class="re2">&gt;</span></span></span>
+    <span class="sc3"><span class="re1">&lt;/kap<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/dok<span class="re2">&gt;</span></span></span>
+</pre></div>
+<p>Beispiele für XPath-Ausdrücke:</p>
+<ul>
+<li><code>/dok</code> selektiert das Wurzel-Element <code>dok</code></li>
+<li><code>/*</code> selektiert das Wurzel-Element unabhängig vom Namen (jedes wohlgeformte XML-Dokument hat genau <em>ein</em> Wurzel-Element)</li>
+<li><code>/dok/kap</code> selektiert alle <code>kap</code>-Elemente innerhalb eines <code>dok</code> Elements</li>
+<li><code>/dok/kap[1]</code> selektiert das erste <code>kap</code>-Element innerhalb eines <code>dok</code> Elements</li>
+<li><code>//pa</code> selektiert alle <code>pa</code>-Elemente auf allen Ebenen (<i>Vorsicht</i>: langsam)</li>
+<li><code>//kap[@title="Nettes Dokument"]/pa</code> selektiert alle Absätze des Kapitels „Nettes Dokument“.</li>
+<li><code>child::*</code> selektiert alle Kindelemente des gegenwärtigen Knotens</li>
+<li><code>child::pa</code> selektiert alle <code>pa</code>-Kinder des gegenwärtigen Knotens</li>
+<li><code>child::text()</code> selektiert alle Textknoten des gegenwärtigen Knotens</li>
+<li><code>./*</code> selektiert alle Unterelemente des gegenwärtigen Knotens</li>
+<li><code>attribute::*</code> selektiert alle Attribute des gegenwärtigen Knotens</li>
+<li><code>namespace::*</code> selektiert alle Namespaces des gegenwärtigen Knotens</li>
+</ul>
+<p>XPath-Visualisierer helfen, die mitunter komplizierten XPath-Abfragen auf konkrete XML-Dateien anzuwenden.</p>
+<p><a name="Siehe_auch" id="Siehe_auch"></a></p>
+<h2><span class="editsection">[<a href="http://de.wikipedia.org/w/index.php?title=XPath&amp;action=edit&amp;section=6" title="Abschnitt bearbeiten: Siehe auch">Bearbeiten</a>]</span> <span class="mw-headline">Siehe auch</span></h2>
+<ul>
+<li><a href="http://de.wikipedia.org/wiki/Document_Object_Model" title="Document Object Model">Document Object Model</a></li>
+</ul>
+<p><a name="Einzelnachweise" id="Einzelnachweise"></a></p>
+<h2><span class="editsection">[<a href="http://de.wikipedia.org/w/index.php?title=XPath&amp;action=edit&amp;section=7" title="Abschnitt bearbeiten: Einzelnachweise">Bearbeiten</a>]</span> <span class="mw-headline">Einzelnachweise</span></h2>
+<ol class="references">
+<li id="cite_note-0"><a href="" title="">↑</a> <a href="http://www.w3.org/TR/xpath#axes" class="external free" title="http://www.w3.org/TR/xpath#axes" rel="nofollow">http://www.w3.org/TR/xpath#axes</a></li>
+</ol>
+<p><a name="Literatur" id="Literatur"></a></p>
+<h2><span class="editsection">[<a href="http://de.wikipedia.org/w/index.php?title=XPath&amp;action=edit&amp;section=8" title="Abschnitt bearbeiten: Literatur">Bearbeiten</a>]</span> <span class="mw-headline">Literatur</span></h2>
+<ul>
+<li>Michael Kay: <i>XPath 2.0 Programmer's Reference</i> Wrox Press, 2004, <a href="http://de.wikipedia.org/wiki/Spezial:ISBN-Suche/0764569104" class="internal">ISBN 0-7645-6910-4</a> (englisch)</li>
+</ul>
+<p><a name="Weblinks" id="Weblinks"></a></p>
+<h2><span class="editsection">[<a href="http://de.wikipedia.org/w/index.php?title=XPath&amp;action=edit&amp;section=9" title="Abschnitt bearbeiten: Weblinks">Bearbeiten</a>]</span> <span class="mw-headline">Weblinks</span></h2>
+<ul>
+<li><a href="http://www.w3.org/TR/xpath" class="external text" title="http://www.w3.org/TR/xpath" rel="nofollow">XML Path Language (XPath) Version 1.0</a> ; sowie <a href="http://www.obqo.de/w3c-trans/xpath-de-20020226" class="external text" title="http://www.obqo.de/w3c-trans/xpath-de-20020226" rel="nofollow">deutsche Übersetzung</a></li>
+<li><a href="http://www.w3.org/TR/xpath20/" class="external text" title="http://www.w3.org/TR/xpath20/" rel="nofollow">XML Path Language (XPath) Version 2.0</a></li>
+<li><a href="http://www.w3schools.com/xpath/default.asp" class="external text" title="http://www.w3schools.com/xpath/default.asp" rel="nofollow">XPath Tutorial von w3schools</a></li>
+<li><a href="http://www.zvon.org/xxl/XPathTutorial/General_ger/examples.html" class="external text" title="http://www.zvon.org/xxl/XPathTutorial/General_ger/examples.html" rel="nofollow">ZVON: XPath Tutorial in deutscher Sprache</a></li>
+<li><a href="http://www.fh-wedel.de/~si/seminare/ws00/Ausarbeitung/3.xlink/xlink0.htm" class="external text" title="http://www.fh-wedel.de/~si/seminare/ws00/Ausarbeitung/3.xlink/xlink0.htm" rel="nofollow">FH Wedel: XLink, XPath, XPointer</a></li>
+<li><a href="http://www.html-world.de/program/xpath_ov.php" class="external text" title="http://www.html-world.de/program/xpath_ov.php" rel="nofollow">HTMLWorld: XPath</a></li>
+</ul>
+<div class="NavFrame" style="clear:both">
+<div class="NavPic"><a href="http://de.wikipedia.org/w/index.php?title=Datei:W3C_Icon.svg&amp;filetimestamp=20080720225742" class="image" title="Logo des W3C"><img alt="Logo des W3C" src="XPath – Wikipedia_files/80px-W3C.png" width="80" height="80" border="0" /></a></div>
+<div class="NavHead">Standards des <a href="http://de.wikipedia.org/wiki/World_Wide_Web_Consortium" title="World Wide Web Consortium">World Wide Web Consortiums</a></div>
+<div class="NavContent">
+<p><b>Empfehlungen</b> <i>(recommendations):</i> <a href="http://de.wikipedia.org/w/index.php?title=Canonical_XML&amp;action=edit&amp;redlink=1" class="new" title="Canonical XML (Seite nicht vorhanden)">Canonical XML</a>&#160;| <a href="http://de.wikipedia.org/wiki/Compound_Document_Formats" title="Compound Document Formats">CDF</a>&#160;| <a href="http://de.wikipedia.org/wiki/Common_Gateway_Interface" title="Common Gateway Interface">CGI</a>&#160;| <a href="http://de.wikipedia.org/wiki/Cascading_Style_Sheets" title="Cascading Style Sheets">CSS</a>&#160;| <a href="http://de.wikipedia.org/wiki/Document_Object_Model" title="Document Object Model">DOM</a>&#160;| <a href="http://de.wikipedia.org/wiki/Hypertext_Markup_Language" title="Hypertext Markup Language">HTML</a>&#160;| <a href="http://de.wikipedia.org/wiki/Mathematical_Markup_Language" title="Mathematical Markup Language">MathML</a>&#160;| <a href="http://de.wikipedia.org/wiki/Web_Ontology_Language" title="Web Ontology Language">OWL</a>&#160;| <a href="http://de.wikipedia.org/w/index.php?title=Pronunciation_Lexicon_Specification&amp;action=edit&amp;redlink=1" class="new" title="Pronunciation Lexicon Specification (Seite nicht vorhanden)">PLS</a>&#160;| <a href="http://de.wikipedia.org/wiki/Resource_Description_Framework" title="Resource Description Framework">RDF</a>&#160;| <a href="http://de.wikipedia.org/wiki/RDF-Schema" title="RDF-Schema">RDF-Schema</a>&#160;| <a href="http://de.wikipedia.org/wiki/Semantic_Interpretation_for_Speech_Recognition" title="Semantic Interpretation for Speech Recognition">SISR</a>&#160;| <a href="http://de.wikipedia.org/wiki/Synchronized_Multimedia_Integration_Language" title="Synchronized Multimedia Integration Language">SMIL</a>&#160;| <a href="http://de.wikipedia.org/wiki/SOAP" title="SOAP">SOAP</a>&#160;| <a href="http://de.wikipedia.org/wiki/Speech_Recognition_Grammar_Specification" title="Speech Recognition Grammar Specification">SRGS</a>&#160;| <a href="http://de.wikipedia.org/wiki/Sprachsynthese#Vorverarbeitung" title="Sprachsynthese">SSML</a>&#160;| <a href="http://de.wikipedia.org/wiki/Scalable_Vector_Graphics" title="Scalable Vector Graphics">SVG</a>&#160;| <a href="http://de.wikipedia.org/wiki/SPARQL" title="SPARQL">SPARQL</a>&#160;| <a href="http://de.wikipedia.org/wiki/Timed_Text" title="Timed Text">Timed Text</a>&#160;| <a href="http://de.wikipedia.org/wiki/VoiceXML" title="VoiceXML">VoiceXML</a>&#160;| <a href="http://de.wikipedia.org/wiki/Web_Services_Description_Language" title="Web Services Description Language">WSDL</a>&#160;| <a href="http://de.wikipedia.org/wiki/XForms" title="XForms">XForms</a>&#160;| <a href="http://de.wikipedia.org/wiki/Extensible_Hypertext_Markup_Language" title="Extensible Hypertext Markup Language">XHTML</a>&#160;| <a href="http://de.wikipedia.org/wiki/Extensible_Markup_Language" title="Extensible Markup Language">XML</a>&#160;| <a href="http://de.wikipedia.org/wiki/XML_Base" title="XML Base">XML Base</a>&#160;| <a href="http://de.wikipedia.org/wiki/XML_Events" title="XML Events">XML Events</a>&#160;| <a href="http://de.wikipedia.org/wiki/XML_Information_Set" title="XML Information Set">XML Information Set</a>&#160;| <a href="http://de.wikipedia.org/wiki/XML_Schema" title="XML Schema">XML Schema</a>&#160;| <a href="http://de.wikipedia.org/wiki/XML-Signature" title="XML-Signature">XML-Signature</a>&#160;| <strong class="selflink">XPath</strong>&#160;| <a href="http://de.wikipedia.org/wiki/XPointer" title="XPointer">XPointer</a>&#160;| <a href="http://de.wikipedia.org/wiki/XQuery" title="XQuery">XQuery</a>&#160;| <a href="http://de.wikipedia.org/wiki/XSL_Transformation" title="XSL Transformation">XSL Transformation</a>&#160;| <a href="http://de.wikipedia.org/wiki/Extensible_Stylesheet_Language_–_Formatting_Objects" title="Extensible Stylesheet Language – Formatting Objects">XSL-FO</a>&#160;| <a href="http://de.wikipedia.org/wiki/Extensible_Stylesheet_Language" title="Extensible Stylesheet Language">XSL</a>&#160;| <a href="http://de.wikipedia.org/wiki/XLink_(Syntax)" title="XLink (Syntax)">XLink</a></p>
+<p><b>Anmerkungen</b> <i>(notes):</i> <a href="http://de.wikipedia.org/wiki/XHTML%2BSMIL" title="XHTML+SMIL">XHTML+SMIL</a>&#160;| <a href="http://de.wikipedia.org/wiki/XAdES" title="XAdES">XAdES</a></p>
+<p><b>Arbeitsentwürfe</b> <i>(working drafts):</i> <a href="http://de.wikipedia.org/wiki/CCXML" title="CCXML">CCXML</a>&#160;| <a href="http://de.wikipedia.org/wiki/CURIE" title="CURIE">CURIE</a>&#160;| <a href="http://de.wikipedia.org/w/index.php?title=InkML&amp;action=edit&amp;redlink=1" class="new" title="InkML (Seite nicht vorhanden)">InkML</a>&#160;| <a href="http://de.wikipedia.org/wiki/XFrames" title="XFrames">XFrames</a>&#160;| <a href="http://de.wikipedia.org/wiki/Extensible_Forms_Description_Language" title="Extensible Forms Description Language">XFDL</a>&#160;| <a href="http://de.wikipedia.org/w/index.php?title=Web_Integration_Compound_Document&amp;action=edit&amp;redlink=1" class="new" title="Web Integration Compound Document (Seite nicht vorhanden)">WICD</a>&#160;| <a href="http://de.wikipedia.org/w/index.php?title=XHTML%2BMathML%2BSVG&amp;action=edit&amp;redlink=1" class="new" title="XHTML+MathML+SVG (Seite nicht vorhanden)">XHTML+MathML+SVG</a>&#160;| <a href="http://de.wikipedia.org/wiki/XML_Binding_Language" title="XML Binding Language">XBL</a>&#160;| <a href="http://de.wikipedia.org/w/index.php?title=XProc&amp;action=edit&amp;redlink=1" class="new" title="XProc (Seite nicht vorhanden)">XProc</a>&#160;| <a href="http://de.wikipedia.org/wiki/HTML_5" title="HTML 5">HTML 5</a></p>
+</div>
+<div class="NavEnd">&#160;</div>
+</div>
+
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 213/1000000
+Post-expand include size: 4420/2048000 bytes
+Template argument size: 2048/2048000 bytes
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in stable version parser cache with key dewiki:stable-pcache:idhash:8468-0!1!0!!de!2 and timestamp 20090224131222 --><div class="printfooter">
+Von „<a href="">http://de.wikipedia.org/wiki/XPath</a>“</div>
+			<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="http://de.wikipedia.org/wiki/Spezial:Kategorien" title="Spezial:Kategorien">Kategorien</a>:&#32;<span dir='ltr'><a href="http://de.wikipedia.org/wiki/Kategorie:XML" title="Kategorie:XML">XML</a></span> | <span dir='ltr'><a href="http://de.wikipedia.org/wiki/Kategorie:Abkürzung" title="Kategorie:Abkürzung">Abkürzung</a></span></div></div>			<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Ansichten</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="" title="Seiteninhalt anzeigen [c]" accesskey="c">Artikel</a></li>
+				 <li id="ca-talk"><a href="http://de.wikipedia.org/wiki/Diskussion:XPath" title="Diskussion zum Seiteninhalt [t]" accesskey="t">Diskussion</a></li>
+				 <li id="ca-edit"><a href="http://de.wikipedia.org/w/index.php?title=XPath&amp;action=edit" title="Seite bearbeiten. Bitte vor dem Speichern die Vorschaufunktion benutzen. [e]" accesskey="e">Seite bearbeiten</a></li>
+				 <li id="ca-history"><a href="http://de.wikipedia.org/w/index.php?title=XPath&amp;action=history" title="Frühere Versionen dieser Seite [h]" accesskey="h">Versionen/Autoren</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Persönliche Werkzeuge</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="http://de.wikipedia.org/w/index.php?title=Spezial:Anmelden&amp;returnto=XPath" title="Sich anzumelden wird zwar gerne gesehen, ist aber keine Pflicht. [o]" accesskey="o">Anmelden</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(http://upload.wikimedia.org/wikipedia/de/b/bc/Wiki.png);" href="http://de.wikipedia.org/wiki/Wikipedia:Hauptseite" title="Hauptseite [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Suche</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="http://de.wikipedia.org/wiki/Spezial:Suche" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="Durchsuche die Wikipedia [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Artikel" title="Gehe direkt zu der Seite, die exakt dem eingegebenen Namen entspricht." />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Volltext" title="Suche nach Seiten, die diesen Text enthalten" />
+			</div></form>
+		</div>
+	</div>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage-description"><a href="http://de.wikipedia.org/wiki/Wikipedia:Hauptseite">Hauptseite</a></li>
+				<li id="n-aboutsite"><a href="http://de.wikipedia.org/wiki/Wikipedia:Über_Wikipedia">Über Wikipedia</a></li>
+				<li id="n-topics"><a href="http://de.wikipedia.org/wiki/Portal:Wikipedia_nach_Themen">Themenportale</a></li>
+				<li id="n-alphindex"><a href="http://de.wikipedia.org/wiki/Spezial:Alle_Seiten">Von A bis Z</a></li>
+				<li id="n-randompage"><a href="http://de.wikipedia.org/wiki/Spezial:Zufällige_Seite" title="Zufällige Seite [x]" accesskey="x">Zufälliger Artikel</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class='generated-sidebar portlet' id='p-Mitmachen'>
+		<h5>Mitmachen</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-help"><a href="http://de.wikipedia.org/wiki/Wikipedia:Hilfe" title="Hilfeseite anzeigen">Hilfe</a></li>
+				<li id="n-portal"><a href="http://de.wikipedia.org/wiki/Wikipedia:Autorenportal" title="Über das Portal, was du tun kannst, wo was zu finden ist">Autorenportal</a></li>
+				<li id="n-recentchanges"><a href="http://de.wikipedia.org/wiki/Spezial:Letzte_Änderungen" title="Liste der letzten Änderungen in Wikipedia [r]" accesskey="r">Letzte Änderungen</a></li>
+				<li id="n-contact"><a href="http://de.wikipedia.org/wiki/Wikipedia:Kontakt">Kontakt</a></li>
+				<li id="n-sitesupport"><a href="http://de.wikipedia.org/wiki/Wikipedia:Spenden" title="Unterstütze uns">Spenden</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class='generated-sidebar portlet' id='p-coll-create_a_book'>
+		<h5>Buch erstellen</h5>
+		<div class='pBody'>
+<ul id="collectionPortletList"><li>
+	<a href="http://de.wikipedia.org/w/index.php?title=Spezial:Buch/add_article/&amp;arttitle=XPath&amp;oldid=0" onclick="collectionCall('AddArticle', [wgNamespaceNumber, wgTitle, 0]); return false;" rel="nofollow">Wikiseite hinzufügen</a>
+</li>							<li><a href="http://de.wikipedia.org/wiki/Hilfe:Buchfunktion">Hilfe zu Büchern</a></li></ul><script type="text/javascript">
+/* <![CDATA[ */
+	function collectionCall(func, args) {
+		sajax_request_type = 'POST';
+		sajax_do_call('wfAjaxCollection' + func, args, function(xhr) {
+			sajax_request_type = 'GET';
+			sajax_do_call('wfAjaxCollectionGetPortlet', [func], function(xhr) {
+				document.getElementById('collectionPortletList').parentNode.innerHTML = xhr.responseText;
+			});
+		});
+	}
+/* ]]> */
+</script>		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Werkzeuge</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="http://de.wikipedia.org/wiki/Spezial:Linkliste/XPath" title="Liste aller Seiten, die hierher zeigen [j]" accesskey="j">Links auf diese Seite</a></li>
+				<li id="t-recentchangeslinked"><a href="http://de.wikipedia.org/wiki/Spezial:Änderungen_an_verlinkten_Seiten/XPath" title="Letzte Änderungen an Seiten, die von hier verlinkt sind [k]" accesskey="k">Änderungen an verlinkten Seiten</a></li>
+<li id="t-specialpages"><a href="http://de.wikipedia.org/wiki/Spezial:Spezialseiten" title="Liste aller Spezialseiten [q]" accesskey="q">Spezialseiten</a></li>
+				<li id="t-print"><a href="http://de.wikipedia.org/w/index.php?title=XPath&amp;printable=yes" rel="alternate" title="Druckansicht dieser Seite [p]" accesskey="p">Druckversion</a></li>				<li id="t-permalink"><a href="http://de.wikipedia.org/w/index.php?title=XPath&amp;oldid=55936210" title="Dauerhafter Link zu dieser Seitenversion">Permanentlink</a></li>
+				<li id="t-download-as-pdf"><a href="http://de.wikipedia.org/w/index.php?title=Spezial:Buch/render_article/&amp;arttitle=XPath&amp;oldid=55936210&amp;writer=rl" rel="nofollow">PDF-Version</a></li>
+<li id="t-cite"><a href="http://de.wikipedia.org/w/index.php?title=Spezial:Zitierhilfe&amp;page=XPath&amp;id=55936210">Seite zitieren</a></li>			</ul>
+		</div>
+	</div>
+	<div id="p-lang" class="portlet">
+		<h5>Andere Sprachen</h5>
+		<div class="pBody">
+			<ul>
+				<li class="interwiki-bs"><a href="http://bs.wikipedia.org/wiki/XPath">Bosanski</a></li>
+				<li class="interwiki-cs"><a href="http://cs.wikipedia.org/wiki/XPath">Česky</a></li>
+				<li class="interwiki-da"><a href="http://da.wikipedia.org/wiki/XPath">Dansk</a></li>
+				<li class="interwiki-en"><a href="http://en.wikipedia.org/wiki/XPath">English</a></li>
+				<li class="interwiki-es"><a href="http://es.wikipedia.org/wiki/XPath">Español</a></li>
+				<li class="interwiki-eu"><a href="http://eu.wikipedia.org/wiki/XPath">Euskara</a></li>
+				<li class="interwiki-fi"><a href="http://fi.wikipedia.org/wiki/XPath">Suomi</a></li>
+				<li class="interwiki-fr"><a href="http://fr.wikipedia.org/wiki/XPath">Français</a></li>
+				<li class="interwiki-he"><a href="http://he.wikipedia.org/wiki/XSL#XPath">עברית</a></li>
+				<li class="interwiki-is"><a href="http://is.wikipedia.org/wiki/XPath">Íslenska</a></li>
+				<li class="interwiki-it"><a href="http://it.wikipedia.org/wiki/XPath">Italiano</a></li>
+				<li class="interwiki-ja"><a href="http://ja.wikipedia.org/wiki/XML_Path_Language">日本語</a></li>
+				<li class="interwiki-ko"><a href="http://ko.wikipedia.org/wiki/XPath">한국어</a></li>
+				<li class="interwiki-lt"><a href="http://lt.wikipedia.org/wiki/XPath">Lietuvių</a></li>
+				<li class="interwiki-nl"><a href="http://nl.wikipedia.org/wiki/XPath">Nederlands</a></li>
+				<li class="interwiki-pl"><a href="http://pl.wikipedia.org/wiki/XPath">Polski</a></li>
+				<li class="interwiki-ro"><a href="http://ro.wikipedia.org/wiki/XPath">Română</a></li>
+				<li class="interwiki-ru"><a href="http://ru.wikipedia.org/wiki/XPath">Русский</a></li>
+				<li class="interwiki-sv"><a href="http://sv.wikipedia.org/wiki/XPath">Svenska</a></li>
+				<li class="interwiki-tr"><a href="http://tr.wikipedia.org/wiki/XPath">Türkçe</a></li>
+				<li class="interwiki-uk"><a href="http://uk.wikipedia.org/wiki/XPath">Українська</a></li>
+				<li class="interwiki-zh"><a href="http://zh.wikipedia.org/wiki/XPath">中文</a></li>
+			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="XPath – Wikipedia_files/poweredb.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="http://wikimediafoundation.org/"><img src="XPath – Wikipedia_files/wikimedi.png" border="0" alt="Wikimedia Foundation"/></a></div>
+			<ul id="f-list">
+					<li id="lastmod"> Diese Seite wurde zuletzt am 27. Januar 2009 um 23:22 Uhr geändert.</li>
+					<li id="copyright">Der Text steht unter der <a class='internal' href="http://de.wikipedia.org/wiki/Wikipedia:GNU_Free_Documentation_License">GNU-Lizenz für freie Dokumentation</a>. Bildlizenzen können abweichen.<br />
+Wikipedia® ist eine eingetragene Marke der Wikimedia Foundation Inc.<br /></li>
+					<li id="privacy"><a href="http://de.wikipedia.org/wiki/Wikipedia:Datenschutz" title="Wikipedia:Datenschutz">Datenschutz</a></li>
+					<li id="about"><a href="http://de.wikipedia.org/wiki/Wikipedia:Über_Wikipedia" title="Wikipedia:Über Wikipedia">Über Wikipedia</a></li>
+					<li id="disclaimer"><a href="http://de.wikipedia.org/wiki/Wikipedia:Impressum" title="Wikipedia:Impressum">Impressum</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served by srv36 in 0.170 secs. --></body></html>
+
+<!-- This document saved from http://de.wikipedia.org/wiki/XPath -->
