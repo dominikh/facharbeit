@@ -1,0 +1,25 @@
+<shop>
+  <category>
+    <name>Kategorie 1</name>
+    <products>
+      <product>
+        <name>Produkt 1</name>
+        <price>3</price>
+      </product>
+      <product>
+        <name>Produkt 2</name>
+        <price>10</price>
+      </product>
+    </products>
+  </category>
+
+  <category>
+    <name>Kategorie 2</name>
+    <products>
+      <product>
+        <name>Produkt 3</name>
+        <price>100</price>
+      </product>
+    </products>
+  </category>
+</shop>
