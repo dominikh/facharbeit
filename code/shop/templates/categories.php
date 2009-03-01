@@ -1,3 +1,4 @@
+<h2>Kategorien</h2>
 <dl>
   <?php  foreach($this->get('db')->category as $category): ?>
   <dt class="name">

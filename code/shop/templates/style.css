@@ -3,11 +3,26 @@
   padding: 0;
 }
 
+body {
+  padding: 10px;
+}
+
 #navigation {
   float: left;
   border: 1px solid black;
   width: 10%;
+}
+
+#navigation ul {
   list-style-type: none;
+}
+
+h1 {
+  display: none;
+}
+
+ h2 {
+  display: none;
 }
 
 #content {
@@ -24,7 +39,42 @@
   margin-bottom: 5px;
 }
 
-.category .name {
+.name {
+  /*display: block;*/
+  font-weight: bold;
+}
+
+.product {
+  clear: both;
+}
+
+.description {
+
+}
+
+.product img {
+  float: left;
+  margin-bottom: 10px;
+}
+
+.product h3.description {
+  margin-top: 5px;
+}
+
+#order-form input {
   display: block;
+  margin-bottom: 5px;
+}
+
+#order-form textarea {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#order-form fieldset {
+  margin-bottom: 5px;
+}
+
+#order-form fieldset legend {
   font-weight: bold;
 }
