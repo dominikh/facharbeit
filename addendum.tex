@@ -12,14 +12,16 @@
 \subsection*{Dateien zum Setzen der Facharbeit}
 \addcontentsline{toc}{subsection}{Dateien zum Setzen der Facharbeit}
 \begin{VarDescription}{images/background.png}
-   \item[db.bib] Die \BibTeX Datenbank aller verwendbaren Quellen
-   \item[index.tex] Das Grundgerüst dieses Dokuments
-   \item[addendum.tex] Der \LaTeX-Quelltext des Anhangs
-   \item[index.pdf] Dieses Dokument
-   \item[introduction.tex] Der \LaTeX-Quelltext der Einleitung
    \item[Makefile] Das Makefile zum Kompilieren des Dokuments
-   \item[plaindin.bst] Style für \BibTeX zum Setzen von Literaturverzeichnissen nach DIN 1505
+   \item[addendum.tex] Der \LaTeX-Quelltext des Anhangs
+   \item[db.bib] Die \BibTeX Datenbank aller verwendbaren Quellen
    \item[images/background.png] Das Hintergrundbild des Titelblatts
+   \item[index.pdf] Dieses Dokument
+   \item[index.tex] Das Grundgerüst dieses Dokuments
+   \item[introduction.tex] Der \LaTeX-Quelltext der Einleitung
+   \item[plaindin.bst] Style für \BibTeX zum Setzen von Literaturverzeichnissen nach DIN 1505\footnote{http://de.wikipedia.org/wiki/DIN\_1505-2}
+   \item[application.tex] Der \LaTeX-Quelltext der Wiedergabe der Entwicklung der Applikation
+   \item[xml.tex] Der \LaTeX-Quelltext der Beschreibungen zu XML
 \end{VarDescription}
 
 \subsection*{Verwendete Bücher}
@@ -32,11 +34,29 @@
    \item[XSL-FO.pdf] XSL-FO Praxis\cite{pdf:xslfo}
 \end{VarDescription}
 
+\subsection*{Verwendete Webseiten}
+\addcontentsline{toc}{subsection}{Verwendete Bücher}
+{\small Ausgehend vom Verzeichnis {\em websites/}}
+\begin{VarDescription}{wiki-de-xpath}
+   \item[wiki-de-dom/] Document Object Model\cite{wiki:de:dom}
+   \item[wiki-de-web20/] Web 2.0\cite{wiki:de:web20}
+   \item[wiki-de-xml/] Extensible Markup Language\cite{wiki:de:xml}
+   \item[wiki-de-xpath/] XPath\cite{wiki:de:xpath}
+   \item[www-ibm-xml/] XML for PHP developers, Part 1: The 15-minute PHP-with-XML starter\cite{www:ibm:xml}
+\end{VarDescription}
+
 \subsection*{Die Anwendung}
 \addcontentsline{toc}{subsection}{Die Anwendung}
 {\small Ausgehend vom Verzeichnis {\em code/shop/}}
 \begin{VarDescription}{etc/db.xml}
-  \item[etc/db.xml] Die Datenbank mit allen Produkten
+   \item[etc/db.xml] Die Datenbank mit allen Produkten
+   \item[etc/config.xml] Die Konfigurationsdatei
+   \item[etc/images/] Alle Produktbilder
+   \item[index.php] Die Hauptdatei der Applikation
+   \item[lib/templateengine.php] Die Templateengine
+   \item[lib/controllers/category.php] Die Verwaltung der Anzeige einer Kategorie
+   \item[lib/controllers/order.php] Die Verwaltung des Bestellformulars
+   \item[templates/] Die einzelnen Unterseiten
 \end{VarDescription}
 
 %%% Local Variables:
