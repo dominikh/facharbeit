@@ -12,3 +12,5 @@ buecher
 *.orig
 \#*
 .#*
+index.out
+xampp.exe

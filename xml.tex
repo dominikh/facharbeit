@@ -6,20 +6,23 @@ Auszeichnungssprache zur Darstellung und zum Austausch von
 {\em Extensible Language} rührt daher, dass der Entwickler selber
 definieren kann beziehungsweise muss, welche {\em Mark-up Elemente} in
 dem jeweiligen Dokument erlaubt sind. XML stellt somit nur eine
-Metasprache für das festlegen einer eigenen Sprache dar. Wie dieses
-Festlegen geschieht, wird im späteren Verlauf dargestellt.
+Metasprache für das festlegen einer eigenen Sprache dar.
 
 \section{Aufbau}
-\lstset{language=XML,
-  numbers=left,
-  stringstyle=\ttfamily,
-  frame=box,
-  rulesepcolor=\color{grey},
-  basicstyle=\small
-}
-\lstset{caption=XML-Dokument; Quelle: http://de.wikipedia.org/wiki/XML\cite{wiki:de:xml}}
+\lstset{language=XML, numbers=left, stringstyle=\ttfamily, frame=box,
+  rulesepcolor=\color{grey}, basicstyle=\small }
+\lstset{caption=XML-Dokument; Quelle:
+  http://de.wikipedia.org/wiki/XML\cite{wiki:de:xml}}
 \lstinputlisting{code/examples/xml.xml}
 
+Ein XML-Dokument besteht aus genau einem Element auf oberster Ebene
+und einer beliebigen Anzahl untergeordneter Elemente, die beliebig
+tief verschachtelt werden können. Zu dem können einzelne Elemente auch
+Attribute haben (z.\,B. \lstinline{<eintrag attribut="wert"}).
+Abgesehen davon ist es üblich, in der ersten Zeile eine
+XML-Deklaration anzugeben, welcher unter anderem die verwendete XML
+Version und die verwendete Zeichenkodierung angibt.
+\newpage
 \section{Schemasprachen}
 Schemasprachen dienen dazu, die Struktur von XML-Sprachen zu
 beschreiben und somit anzugeben, welche Elemente wo und wie vorkommen
@@ -77,29 +80,7 @@ Euro (in unserem Fall genau ein Produkt) liefern:
 \lstinline{//product} soviel wie "`alle Unterelemente mit dem Namen
 product"' und \lstinline{price = 10} überprüft, ob in den gefundene
 Elementen ein {\em price} mit dem Wert {\em 10} vorhanden ist.
-
-{\small
-  \begin{table}[hb]
-    \caption{Achsen in XPath\cite{wiki:de:xpath}}
-    \begin{tabularx}{\textwidth}{l|X|l}
-      Achse & adressierte Knoten & Abkürzung \\
-      \hline
-      child & direkt untergeordnete Knoten & weglassen \\
-      parent & der direkt Übergeordnete Elternknoten  & .. \\
-      self & der Kontextknoten selbst (nützlich für zusätzliche Bedingungen) & . \\
-      ancestor & Übergeordnete Knoten & \\
-      ancestor-or-self & Übergeordnete Knoten inklusive des Kontextknotens & \\
-      descendant & untergeordnete Knoten & \\
-      descendant-or-self & untergeordnete Knoten inklusive des Kontextknotens & // \\
-      following & nachfolgend im XML-Dokument (ohne untergeordnete Knoten) & \\
-      following-sibling & wie following, und vom gleichen parent stammend & \\
-      preceding vorhergehend & im XML-Dokument ohne Übergeordnete Knoten & \\
-      preceding-sibling & wie preceding, und vom gleichen parent stammend & \\
-      attribute & Attributknoten & @ \\
-      namespace & Namensraumknoten, die aus dem Attribut xmlns stammen &
-    \end{tabularx}
-  \end{table}
-}
+Eine Tabelle mit allen Achsen findet sich im Anhang auf Seite \pageref{table-axes}
 
 \section{PHP}\label{xml-php}
 Für uns von besonderem Interesse ist es natürlich, wie wir auf
@@ -113,11 +94,12 @@ diese verwenden können. Hierfür gibt es seit PHP 5 einige
 (\enquote{Of the many APIs available in PHP5, the DOM and SimpleXML
   are the most familiar,}\cite{www:ibm:xml}). Und auf genau diese
 beiden, DOM und SimpleXML werde ich im Näheren eingehen.
+\newpage
 \subsection{DOM}
 Das {\em Document Object Model}, kurz DOM, ist ein W3C\footnote{World
   Wibe Web Consortium} Standard für das Verarbeiten und Manipulieren
 von HTML und XML-Dokumenten. Dabei wird das jeweilige Dokument als
-(Stamm)Baum dargestellt und behält somit den logische Aufbau des
+(Stamm)Baum dargestellt und behält somit den logischen Aufbau des
 Ausgangsdokumentes bei. Hierbei ist zu beachten, dass DOM ein
 sogenannter {\em tree-based} Parser ist und somit einen Baum vom
 ganzen Dokument erstellt. Daher ist es eher ungeeignet, um große
@@ -143,3 +125,42 @@ Erwähnenswert ist hierbei, dass SimpleXML in der Lage ist, mittels DOM
 die Dokumente auch zu manipulieren und dank XPath eine einfache
 Methode liefert, um durch das Dokument zu navigieren (vgl. Abschnitt
 \ref{xpath}, Seite \pageref{xpath}).
+
+\section{Vergleich mit relationalen Datenbanken}\label{relational_databases}
+Im Folgenden werde ich XML gestützte Datenbanken mit relationalen
+Datenbanken, in diesem Fall MySQL, vergleichen und schauen, inwiefern
+man XML als Ersatz für solche hernehmen kann, oder ob wir es doch mit
+grundlegend verschiedenen Dingen zu tun haben.
+
+Die Merkmale einer relationalen Datenbank sind, dass sie in Tabellen
+unterteilt ist, welche Zeilen (Einträge) und Spalten (Attribute)
+beinhaltet. Des Weiteren ist ein Hauptmerkmal, dass Datensätze bzw.
+Tabellen miteinander verknüpft werden können. Auch deswegen ist es
+notwendig, dass jeder Eintrag genau identifiziert werden kann, zum
+Beispiel mittels einer ID.
+
+Dies ist in XML nicht der Fall. Zwar ist es möglich, selber Elemente
+für IDs einzubringen, aber dies würde eher einem hohen Aufwand
+entsprechen, wäre unter Umständen nicht eindeutig und vor allem ein
+Verlinken wäre mit heimischen Mitteln nicht notwendig. Stattdessen
+müsste man mit unzähligen XPaths oder XQueries oder ähnlichem
+arbeiten.
+
+Ein weiterer Unterschied ist, dass es in Datenbanken festgelegte
+Datentypen gibt. So wird klar zwischen Zahlen, Strings, Daten, BLOBs
+und so weiter unterschieden. Zwar ist es dank XML-Schema auch in XML
+möglich, nur bestimmte Typen zuzulassen, jedoch unterliegt dies in
+keiner Weise einem Standard. So könnte z.\,B. jeder eine andere Vorstellung
+von einem Datum haben.
+
+Als letztes ist noch ganz klar die Performance zu nennen. Relationale
+Datenbanken unterstützen meist einen Index, welcher eine etwaige Suche
+um ein vielfaches beschleunigt. Auch können die Daten effizienter und
+platzsparender gespeichert werden, da nie erwartet wird, dass die
+Dateien menschenlesbar sind, im Gegensatz zu XML.
+
+Als Fazit kann man sagen, dass XML kaum bis gar nicht mit relationalen
+Datenbanken wie MySQL zu vergleichen sind und im großen Maßstab sich
+wohl auch nicht rechnen würden. Stattdessen ist das Einsatzgebiet eher
+im Austausch von kleinen Datenmengen zu sehen, wie er z.\,B. in
+modernen Webanwendungen anzutreffen ist.

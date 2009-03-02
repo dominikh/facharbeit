@@ -14,18 +14,20 @@
 \begin{VarDescription}{images/background.png}
    \item[Makefile] Das Makefile zum Kompilieren des Dokuments
    \item[addendum.tex] Der \LaTeX-Quelltext des Anhangs
+   \item[application.tex] Der \LaTeX-Quelltext der Wiedergabe der Entwicklung der Applikation
+   \item[conclusion.tex] Der \LaTeX-Quelltext des Fazits
    \item[db.bib] Die \BibTeX Datenbank aller verwendbaren Quellen
-   \item[images/background.png] Das Hintergrundbild des Titelblatts
+   \item[images/db.png] Das Hintergrundbild des Titelblatts
+   \item[images/dom.png] Ein DOM Stammbaum
    \item[index.pdf] Dieses Dokument
    \item[index.tex] Das Grundgerüst dieses Dokuments
    \item[introduction.tex] Der \LaTeX-Quelltext der Einleitung
    \item[plaindin.bst] Style für \BibTeX zum Setzen von Literaturverzeichnissen nach DIN 1505\footnote{http://de.wikipedia.org/wiki/DIN\_1505-2}
-   \item[application.tex] Der \LaTeX-Quelltext der Wiedergabe der Entwicklung der Applikation
    \item[xml.tex] Der \LaTeX-Quelltext der Beschreibungen zu XML
 \end{VarDescription}
 
-\subsection*{Verwendete Bücher}
-\addcontentsline{toc}{subsection}{Verwendete Bücher}
+\subsection*{Verwendete Quellen}
+\addcontentsline{toc}{subsection}{Verwendete Quellen}
 {\small Ausgehend vom Verzeichnis {\em books/}}
 \begin{VarDescription}{20\_XSLT\_2df3rfy.pdf}
    \item[20\_XSLT\_2df3rfy.pdf] XSLT\cite{pdf:xslt}
@@ -34,8 +36,8 @@
    \item[XSL-FO.pdf] XSL-FO Praxis\cite{pdf:xslfo}
 \end{VarDescription}
 
-\subsection*{Verwendete Webseiten}
-\addcontentsline{toc}{subsection}{Verwendete Bücher}
+% \subsection*{Verwendete Webseiten}
+% \addcontentsline{toc}{subsection}{Verwendete Webseiten}
 {\small Ausgehend vom Verzeichnis {\em websites/}}
 \begin{VarDescription}{wiki-de-xpath}
    \item[wiki-de-dom/] Document Object Model\cite{wiki:de:dom}
@@ -58,6 +60,39 @@
    \item[lib/controllers/order.php] Die Verwaltung des Bestellformulars
    \item[templates/] Die einzelnen Unterseiten
 \end{VarDescription}
+
+\subsection*{Sonstiges}
+\addcontentsline{toc}{subsection}{Sonstiges}
+\begin{VarDescription}{xampp.exe}
+   \item[COPYING] Eine Kopie der GPLv3
+   \item[xampp.exe] Das XAMPP Serverpaket
+\end{VarDescription}
+
+\section*{XPath Achsen}
+\addcontentsline{toc}{section}{XPath Achsen}
+{\small
+  \begin{table}[Hb]
+    \caption{Achsen in XPath\cite{wiki:de:xpath}}
+    \label{table-axes}
+    \begin{tabularx}{\textwidth}{l|X|l}
+      Achse & adressierte Knoten & Abkürzung \\
+      \hline
+      child & direkt untergeordnete Knoten & weglassen \\
+      parent & der direkt Übergeordnete Elternknoten  & .. \\
+      self & der Kontextknoten selbst (nützlich für zusätzliche Bedingungen) & . \\
+      ancestor & Übergeordnete Knoten & \\
+      ancestor-or-self & Übergeordnete Knoten inklusive des Kontextknotens & \\
+      descendant & untergeordnete Knoten & \\
+      descendant-or-self & untergeordnete Knoten inklusive des Kontextknotens & // \\
+      following & nachfolgend im XML-Dokument (ohne untergeordnete Knoten) & \\
+      following-sibling & wie following, und vom gleichen parent stammend & \\
+      preceding vorhergehend & im XML-Dokument ohne Übergeordnete Knoten & \\
+      preceding-sibling & wie preceding, und vom gleichen parent stammend & \\
+      attribute & Attributknoten & @ \\
+      namespace & Namensraumknoten, die aus dem Attribut xmlns stammen &
+    \end{tabularx}
+  \end{table}
+}
 
 %%% Local Variables:
 %%% mode: latex

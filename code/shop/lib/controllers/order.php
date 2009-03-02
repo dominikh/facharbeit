@@ -44,6 +44,7 @@ if(!isset($_REQUEST['c']) or !isset($_REQUEST['p'])) {
     $message .= "Email: " . $_REQUEST['email'] . "\n";
 
     mail($config->email_address['value'], "Bestellung", $message);
+    // echo '<pre>' . $message . '</pre>';
   }
   // in general we want to see all warnings, these really help
   error_reporting(E_ALL);

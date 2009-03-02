@@ -45,8 +45,67 @@ treffen haben, da ich bereits eine vollständige Entwicklungsumgebung
 für Webanwendungen, sprich Apache, PHP, Mailserver und einen
 angebrachten Editor, installiert habe.
 
-\section{Entwicklung}
+\section{Installationshinweise}
+Die Installation der Anwendung setzt einen funktionieren Webserver
+(wie z.\,B. Apache) und PHP 5 voraus, wie es zum Beispiel im XAMPP
+Paket zu finden ist. Des Weiteren ist es von Vorteil, einen
+funktionieren Mailserver zu haben, damit die Bestellungen versendet
+werden können. Sollte kein Mailserver vorhanden sein, so kann folgende
+Zeile in der Datei {\em lib/controllers/order.php} entkommentiert
+werden, um die Email stattdessen direkt im Browser zu sehen:
+\lstinline|// echo '<pre>' . $message . '</pre>';|
 
+
+\section{Entwicklung}
+Als erstes entwickle ich eine minimalistische Klasse zur Verwaltung
+der einzelnen Seiten, welche sich im Groben an Smarty orientiert. Sie
+bietet somit eine {\em assign} Methode, mit welcher ich den Seiten
+Variablen übergeben kann und eine {\em display} Methode, welche die
+Seite darstellt. Des Weiteren besitzt die Klasse eine Methode {\em
+  get}, mit welcher die Seiten auf die Variablen zugreifen können.
+Verwenden werde ich diese Klasse so, dass sie die Hauptdatei der Seite
+({\em templates/index.php} lädt, welche wiederum per {\em include} und
+{\em get} die gewünschte Unterseite einbindet. Somit muss das
+Grundlayout der Seite nur ein mal festgelegt werden.
+
+Als nächstes schreibe ich die {\em index.php}, welche vom Browser
+aufgerufen werden wird. Diese initialisiert eine Instanz der vorher
+angelegten Klasse, lädt die Datenbank und überprüft, welche Unterseite
+aufgerufen werden soll. Dafür haben wir ein Array, welches die
+erlaubten Seitennamen beinhaltet. Sollte die gewünschte Seite nicht in
+diesem vorhanden sein, wird eine Fehlermeldung ausgegeben. Des
+Weiteren überprüfen wir, ob für die gewünschte Seite ein Controller
+existiert, welcher weitergehende Aktionen durchführen wird, wie z.\,B.
+im Falle des Bestellformulars zu überprüfen, ob alle benötigten
+Informationen übergeben wurden.
+
+Nach dem dieses Grundgerüst steht, werde ich die einzelnen Seiten
+erstellen. Hierfür schreibe ich ein simples XHTML-Grundgerüst und
+formatiere dieses mit CSS. Etwaige Variablen, die die Seite von der
+Klasse benötigt, werden mittels PHP-Blöcken eingebunden. Beim
+Schreiben der Seiten habe ich besonderes Augenmerk darauf gelegt,
+semantisches und valides Markup zu schreiben. Für die Übersicht der
+Kategorien und Produkte benutze ich zudem Schleifen, welche das
+Markup dynamisch generieren.
+
+Abschließend fehlen nur noch zwei Controller, namentlich die für die
+Übersicht einer einzelnen Kategorie ({\em
+  lib/controllers/category.php}) und die, welche das Bestellformular
+({\em lib/controllers/order.php}) verwaltet. In dem Controller für die
+Kategorie wird per XPath die jenige Kategorie ausgewählt, die der
+Anwender vorher in der Übersicht der Kategorien ausgewählt hat. Dies
+wird gezielt in einem Controller und nicht im Template gemacht, da
+dies Anwendungslogik und nicht Ausgabe ist.
+
+Der andere Controller hat einiges mehr an Arbeit. Dieser muss zum
+einen kontrollieren, ob der Anwender bereits alle nötigen
+Informationen angegeben hat, das heißt Namen, Anschrift, Emailadresse,
+ob er nicht die URL per Hand in solcher Art und Weise manipuliert hat,
+dass ein weiteres Arbeiten unmöglich wäre, und falls alle
+Informationen angegeben wurden, muss er eine passende Email
+konstruieren und uns zuschicken. Als kleine Hilfe für den Anwender
+werden bereits eingegebene Daten wieder im Formular angezeigt, damit
+er nicht alles von vorne eingeben muss.
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "index"
